@@ -3,7 +3,7 @@
 
 /**
  * main - writes to the stderr using
- * Description: the program writes to stderr.
+ *
  * Return: value 1 on success.
  */
 int main(void)
