@@ -1,13 +1,14 @@
-#include <stdio.h>
+#include <unistd.h>
 
-/*
- *
- *
+/**
+ *main - Prints putchar
+ *Return: 0(success)
  */
-int main()
+int main(void)
 {
-	printf("_putchar");
+	const char msg[] = "_putchar\n";
+
+	write(STDOUT_FILENO, msg, sizeof(msg) - 1);
 
 	return (0);
 }
-
