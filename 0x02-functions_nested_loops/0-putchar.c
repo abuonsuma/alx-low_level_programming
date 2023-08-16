@@ -1,14 +1,21 @@
 #include <unistd.h>
 
 /**
- *main - Prints putchar
- *Return: 0(success)
+ main - entry point
+ description: prints _putchar to stdout
+ return: 0(success)
  */
 int main(void)
 {
-	const char msg[] = "_putchar\n";
+	_putchar("_");
+	_putchar("p");
+	_putchar("u");
+	_putchar("t");
+	_putchar("c");
+	_putchar("h");
+	_putchar("a");
+	_putchar("r\n");
 
-	write(STDOUT_FILENO, msg, sizeof(msg) - 1);
 
 	return (0);
 }
