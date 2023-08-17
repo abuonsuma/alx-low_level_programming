@@ -14,7 +14,7 @@ void print_times_table(int n)
 		
 		for (r = 0; r <= n; r++)
 		{
-			prod = q * r;
+			product = q * r;
 			
 			if (product < 10 && r != n && r != 0)
 			{
@@ -27,12 +27,12 @@ void print_times_table(int n)
 			else if (product >= 10 && r != n)
 			{
 				_putchar((product / 10) + '0');
-				_putchar((produst % 10) + '0');
+				_putchar((product % 10) + '0');
 				_putchar(',');
 				_putchar(' ');
 			}
 			
-			else if (product < 10 && r == n && b != 0)
+			else if (product < 10 && r == n && r != 0)
 			{
 				_putchar(' ');
 				_putchar(product + '0');
