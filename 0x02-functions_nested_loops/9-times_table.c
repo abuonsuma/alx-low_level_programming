@@ -7,7 +7,7 @@
 */
 void times_table(void)
 {
-	int q, r, prod;
+	int q, r, product;
 
 	for (q = 0; q <= 9; q++)
 	{
