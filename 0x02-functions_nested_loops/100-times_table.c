@@ -9,7 +9,7 @@ void print_times_table(int n)
 {
 	int q, r, product;
 
-	for (q = 0; q <= n; r++)
+	for (q = 0; q <= n; q++)
 	{
 		
 		for (r = 0; r <= n; r++)
