@@ -3,7 +3,7 @@
 /**
  *main - entry point
  *description: prints _putchar to stdout
- *return: 0(success)
+ *return: returns 0
  */
 int main(void)
 {
