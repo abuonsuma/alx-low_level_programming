@@ -17,7 +17,7 @@ int main(void)
 		q = r;
 		r = sum;
 		if (i == 96)
-			printf("%lu\n", x);
+			printf("%lu\n", q);
 	}
 
 	return (0);
