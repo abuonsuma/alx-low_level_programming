@@ -1,50 +1,42 @@
-#include "main.h"
+#include"main.h"
 
 /**
- *print_times_table - prints tables 1 to n
+ * print_times_table - prints time table of n
  *
- *Return: void
+ * @n: takes number input
 */
+
 void print_times_table(int n)
 {
-	int a, b, product;
+	int product, result, num;
 
-	for (a = 0; a <= n; a++)
+	if (n <= 15 && n >= 0)
 	{
-		for (b = 0; b <= n; b++)
+		for (num = 0; num <= n; ++num)
 		{
-			product = a * b;
-			if (product < 10 && b != n && b != 0)
+			_putchar(48);
+			for (result = 1; result <= n; ++result)
 			{
-				_putchar(' ');
-				_putchar(product + '0');
 				_putchar(',');
 				_putchar(' ');
+
+				product = num * result;
+
+				if (product <= 9)
+					_putchar(' ');
+				if (product <= 99)
+					_putchar(' ');
+
+				if (product >= 100)
+				{
+					_putchar((product / 100) + 48);
+					_putchar((product / 10) % 10 + 48);
+				} else if (product <= 99 && product >= 10)
+					_putchar((product / 10) + 48);
+				_putchar((product % 10) + 48);
 			}
-			else if (product >= 10 && b != n)
-			{
-				_putchar((product / 10) + '0');
-				_putchar((product % 10) + '0');
-				_putchar(',');
-				_putchar(' ');
-			}
-			else if (product < 10 && b == n && b != 0)
-			{
-				_putchar(' ');
-				_putchar(product + '0');
-			}
-			else if (b == 0)
-			{
-				_putchar('0' + product);
-				_putchar(',');
-				_putchar(' ');
-			}
-			else
-			{
-				_putchar((product / 10) + '0');
-				_putchar((product % 10) + '0');
-			}
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
 }
+
