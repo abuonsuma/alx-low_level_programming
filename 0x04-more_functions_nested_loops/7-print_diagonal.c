@@ -2,21 +2,22 @@
 
 /**
  * print_diagonal - print a diagonal line
+ *
  * @n: is the number of times the \ character
- * should be printed
+ *     should be printed
 */
 
 void print_diagonal(int n)
 {
-	int point, gap;
+	int postn, space;
 
 	if (n <= 0)
 		_putchar('\n');
 	else
 	{
-		for (point = 1; point <= n; ++point)
+		for (postn = 1; postn <= n; ++postn)
 		{
-			for (gap = 1; gap <= point; ++gap)
+			for (space = 1; space <= postn; ++space)
 				_putchar(' ');
 			_putchar(92); /*is equal to '/' char*/
 			_putchar('\n');
