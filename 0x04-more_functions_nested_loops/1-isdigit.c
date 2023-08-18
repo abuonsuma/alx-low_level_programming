@@ -2,7 +2,7 @@
 
 /**
  * isdigit - checks for 0 through 9
- * @c - parameter
+ * @c - parameter to checked
  * return: 1 successful, 0 unsuccessful
  */
 
