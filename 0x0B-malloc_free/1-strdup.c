@@ -9,9 +9,9 @@
 char *_strdup(char *str)
 {
 	char *dup;
-	unsigned int , len;
+	unsigned int q, len;
 
-	i = 0;
+	q = 0;
 	len = 0;
 
 	if (str == NULL)
@@ -25,8 +25,8 @@ char *_strdup(char *str)
 	if (dup == NULL)
 		return (NULL);
 
-	while ((dup[i] = str[i]) != '\0')
-		i++;
+	while ((dup[q] = str[q]) != '\0')
+		q++;
 
 	return (dup);
 }
