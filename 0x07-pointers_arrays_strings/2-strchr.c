@@ -1,20 +1,29 @@
 #include "main.h"
 
 /**
- *_strncpy - a function that copies a string.
- *@dest: pointer to destination string.
- *@src: pointer to source string.
- *@n: number of bytes to be used.
- *Return: pointer to destination string.
- */
-char *_strncpy(char *dest, char *src, int n)
+ * _strchr - a function that locates a character in a string
+ * @s: pointer to our string array input
+ * @c: character to locate from input array
+ *
+ * Return: first occurence of charatcer or null if not found
+*/
+
+char *_strchr(char *s, char c)
 {
-	int q;
+	while (*s != '\0')
+	{
+		if (*s == c)
+			return (s);
+		s++;
+	}
 
-	for (q = 0; q < n && src[q] != '\0'; q++)
-		dest[q] = src[q];
-		for (q = 0; q < n; q++)
-			dest[q] = '\0';
-
-	return (dest);
+/**
+ * if c is '\0', you should return
+ * the pointer to the '\0' of the
+ * string s
+ */
+	if (*s == c)
+		return (s);
+	/*return null if not found*/
+	return ('\0');
 }
