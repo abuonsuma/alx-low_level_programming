@@ -3,10 +3,10 @@
 #include "3-calc.h"
 
 /**
-  *get_op_func - function selects the correct function to perform operation
-  *@s: argument operator
-  *Return: correct function result is successful and NULL if not
-  */
+ * get_op_func - function selects the correct function to perform operation
+ * @s: argument operator
+ * return: correct function result is successful and NULL if not
+ */
 int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
@@ -17,16 +17,16 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-	int q;
+	int i;
 
-	q = 0;
-	while (q < 5)
+	i = 0;
+
+	while (ops[i].op)
 	{
-		if (s[0] == ops[q].op[0])
-		{
-			return (ops[q].f);
-		}
-		q++;
+		if (strcmp(ops[i].op, s) == 0)
+			return (ops[i].f);
+		i++;
 	}
+
 	return (NULL);
 }
