@@ -18,10 +18,10 @@ listint_t *find_listint_loop(listint_t *head)
 	{
 		r = r->next->next;
 		q = q->next;
-		if (r == q)
+		if (q == r)
 		{
 			q = head;
-			while (q != r)
+			while (q != fast)
 			{
 				q = q->next;
 				r = r->next;
